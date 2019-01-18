@@ -66,11 +66,11 @@ class HidingViewController {
 	}
 	
 	func isContracted() -> Bool {
-		return Float(fabs(view.center.y - contractedCenterValue().y)) < .ulpOfOne
+		return Float(abs(view.center.y - contractedCenterValue().y)) < .ulpOfOne
 	}
 	
 	func isExpanded() -> Bool {
-		return Float(fabs(view.center.y - expandedCenterValue().y)) < .ulpOfOne
+		return Float(abs(view.center.y - expandedCenterValue().y)) < .ulpOfOne
 	}
 	
 	func totalHeight() -> CGFloat {
@@ -125,7 +125,7 @@ class HidingViewController {
     func snap(_ contract: Bool, completion:(() -> Void)!) -> CGFloat {
 		var deltaY: CGFloat = 0
 		
-		UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions(), animations: {
+		UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions(), animations: {
 			if let child = self.child {
 				if contract && child.isContracted() {
 					deltaY = self.contract()

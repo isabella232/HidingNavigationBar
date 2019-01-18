@@ -71,10 +71,10 @@ class HiddenNavViewController: UIViewController, UITableViewDataSource, UITableV
 		// Configure the cell...
 		if indexPath.row == 0 {
 			cell.textLabel?.text = "close controller";
-			cell.selectionStyle = UITableViewCellSelectionStyle.none
+			cell.selectionStyle = UITableViewCell.SelectionStyle.none
 		} else {
 			cell.textLabel?.text = "row \((indexPath as NSIndexPath).row)"
-			cell.selectionStyle = UITableViewCellSelectionStyle.none
+			cell.selectionStyle = UITableViewCell.SelectionStyle.none
 		}
 		return cell
 	}

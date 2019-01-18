@@ -23,7 +23,7 @@ class MasterViewController: UITableViewController {
 	
 	func styleNavigationController(_ navigationController: UINavigationController){
 		navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 		navigationController.navigationBar.tintColor = UIColor.white
 		navigationController.navigationBar.barTintColor = UIColor(red: 41/255, green: 141/255, blue: 250/255, alpha: 1)
 	}
@@ -81,7 +81,7 @@ class MasterViewController: UITableViewController {
 		} else {
 			let controller = HiddenNavViewController()
 			let navController = UINavigationController(rootViewController: controller)
-			navController.interactivePopGestureRecognizer?.delegate = InteractivePopGestureRecognizerDelegate()
+			// navController.interactivePopGestureRecognizer?.delegate = InteractivePopGestureRecognizerDelegate()
 			styleNavigationController(navController)
 			navigationController?.present(navController, animated: true, completion: nil)
 		}
