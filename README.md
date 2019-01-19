@@ -134,7 +134,7 @@ github "tristanhimmelman/HidingNavigationBar" ~> 2.0
 
 If you are using [CocoaPods](https://cocoapods.org/), add the following line to your Podfile:
 
-`pod 'HidingNavigationBar', '~> 2.0'`
+`pod 'HidingNavigationBar', :git => 'https://github.com/smartphone-pro/HidingNavigationBar.git'`
 
 (for Swift 3, use `pod 'HidingNavigationBar', '~> 1.0'` instead)
 
